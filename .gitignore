@@ -6,4 +6,4 @@
 #Cache folders
 __pycache__/
 
-.DW_Store
+.DS_Store
