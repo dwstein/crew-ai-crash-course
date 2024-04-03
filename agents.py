@@ -47,14 +47,17 @@ class TravelAgents:
                 I have decades of expereince making travel iteneraries."""),
             goal=dedent(f"""
                         Create a 7-day travel itinerary with detailed per-day plans,
-                        include budget, packing suggestions, and safety tips.
+                        include budget, packing suggestions, and safety tips.  Each day should
+                        have a morning activity, a place to have lunch, an afternoon activity,
+                        and a place to have dinner. Do not just return a list of things to do.
+                        The itinerary should be 7 days; no more, no less.
                         """),
             tools=[
                 SearchTools.search_internet,
                 CalculatorTools.calculate
             ],
             verbose=True,
-            llm=self.OpenAIGPT35,
+            llm=self.OpenAIGPT4,
         )
 
     def city_selection_expert(self):
@@ -66,7 +69,7 @@ class TravelAgents:
                 f"""Select the best cities based on weather, season, prices, and traveler interests"""),
             tools=[SearchTools.search_internet],
             verbose=True,
-            llm=self.OpenAIGPT35,
+            llm=self.OpenAIGPT4,
         )
 
     def local_tour_guide(self):

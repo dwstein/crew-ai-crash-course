@@ -75,7 +75,7 @@ if __name__ == "__main__":
     """))
     cities = input(
         dedent("""
-      What are the cities options you are interested in visiting?
+      What country you are interested in visiting?
     """))
     date_range = input(
         dedent("""
